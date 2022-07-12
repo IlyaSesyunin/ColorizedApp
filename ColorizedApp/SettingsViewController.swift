@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     //MARK: - IB Outlets
     @IBOutlet var redLabel: UILabel!
@@ -20,13 +20,16 @@ class ViewController: UIViewController {
     
     @IBOutlet var mainView: UIView!
     
+    var color: Color!
+    var delegate: SettingsViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
+        
         setupMainView()
-        redSliderAction()
-        greenSliderAction()
-        blueSliderAction()
-        mainViewAction()
+        setupSliders()
+        setupLabels()
     }
     
     // MARK: - IB Actions
@@ -49,10 +52,29 @@ class ViewController: UIViewController {
             blue: CGFloat(blueSlider.value),
             alpha: 1.00
         )
+        color = Color(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value)
+    }
+    
+    @IBAction func doneButtonPressed() {
+        delegate.setColor(color)
+        dismiss(animated: true)
     }
     
     // MARK: - Private Methods
     private func setupMainView() {
         mainView.layer.cornerRadius = 10
+        mainView.backgroundColor = color.getColor
+    }
+    
+    private func setupSliders() {
+        redSlider.value = color.red
+        greenSlider.value = color.green
+        blueSlider.value = color.blue
+    }
+    
+    private func setupLabels() {
+        redLabel.text = String(format: "%.2f", color.red)
+        greenLabel.text = String(format: "%.2f", color.green)
+        blueLabel.text = String(format: "%.2f", color.blue)
     }
 }
