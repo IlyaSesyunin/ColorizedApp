@@ -14,7 +14,6 @@
 		091FB0192864F33300A70281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091FB0182864F33300A70281 /* Assets.xcassets */; };
 		091FB01C2864F33300A70281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091FB01A2864F33300A70281 /* LaunchScreen.storyboard */; };
 		09896BFF287CBD9300BBC77B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09896BFE287CBD9300BBC77B /* MainViewController.swift */; };
-		09896C01287CBED500BBC77B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09896C00287CBED500BBC77B /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		091FB01B2864F33300A70281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		091FB01D2864F33300A70281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09896BFE287CBD9300BBC77B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		09896C00287CBED500BBC77B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +58,48 @@
 		091FB00E2864F32D00A70281 /* ColorizedApp */ = {
 			isa = PBXGroup;
 			children = (
-				091FB00F2864F32D00A70281 /* AppDelegate.swift */,
-				091FB0112864F32D00A70281 /* SceneDelegate.swift */,
-				09896C00287CBED500BBC77B /* Color.swift */,
-				09896BFE287CBD9300BBC77B /* MainViewController.swift */,
-				091FB0132864F32D00A70281 /* SettingsViewController.swift */,
-				091FB0152864F32D00A70281 /* Main.storyboard */,
-				091FB0182864F33300A70281 /* Assets.xcassets */,
-				091FB01A2864F33300A70281 /* LaunchScreen.storyboard */,
-				091FB01D2864F33300A70281 /* Info.plist */,
+				09896C04287D5FDB00BBC77B /* Storyboards */,
+				09896C02287D5F4700BBC77B /* ViewControllers */,
+				09896C05287D600400BBC77B /* App */,
+				09896C06287D601200BBC77B /* Resources */,
 			);
 			path = ColorizedApp;
+			sourceTree = "<group>";
+		};
+		09896C02287D5F4700BBC77B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				09896BFE287CBD9300BBC77B /* MainViewController.swift */,
+				091FB0132864F32D00A70281 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		09896C04287D5FDB00BBC77B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				091FB0152864F32D00A70281 /* Main.storyboard */,
+				091FB01A2864F33300A70281 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		09896C05287D600400BBC77B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				091FB01D2864F33300A70281 /* Info.plist */,
+				091FB00F2864F32D00A70281 /* AppDelegate.swift */,
+				091FB0112864F32D00A70281 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		09896C06287D601200BBC77B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				091FB0182864F33300A70281 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +176,6 @@
 				091FB0142864F32D00A70281 /* SettingsViewController.swift in Sources */,
 				091FB0102864F32D00A70281 /* AppDelegate.swift in Sources */,
 				091FB0122864F32D00A70281 /* SceneDelegate.swift in Sources */,
-				09896C01287CBED500BBC77B /* Color.swift in Sources */,
 				09896BFF287CBD9300BBC77B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4STR2A3PL4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorizedApp/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -325,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4STR2A3PL4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ColorizedApp/Info.plist;
+				INFOPLIST_FILE = ColorizedApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
